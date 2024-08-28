@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World!</title>
+</head>
+<body>
+  <div id="container"></div>
+
+  
+
+  <script defer>
+    const container = document.querySelector("#container");
+
+    const button1 = document.createElement("button");
+    button1.textContent = "Test 1 for Hello World!";
+    container.appendChild(button1);
+
+    const theText = document.createElement("h1");
+    container.appendChild(theText);
+
+
+    button1.addEventListener("click", ()  => {
+      alert("Hello World!");
+
+    });
+
+    const button2 = document.createElement("button");
+    button2.textContent = "Test 2 for Hello world";
+    container.appendChild(button2);
+
+    button2.addEventListener("click", () => {
+      theText.textContent = "Hello World!";
+      
+    })
+  </script>
+</body>
+</html>
