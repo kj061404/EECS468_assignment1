@@ -1,37 +1,50 @@
-<!DOCTYPE html>
+<!--
+EECS 448 assignment 1
+Description: This is a simple HTML page that has two buttons. When the first button is clicked, an alert box will pop up with the message "Hello World!". When the second button is clicked, the text "Hello World!" will be displayed on the page.
+Inputs: None
+Output: prowser with two buttons
+Collaboration: EECS 468 slides
+Author: Kobe Jordan
+Date: 9/01/2024
+-->
+
+
+
+
+<!DOCTYPE html> <!-- This is the doctype declaration for HTML5 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World!</title>
+  <title>Hello World!</title> <!-- This is the title of the page, this changes the tap name in your browser-->
 </head>
 <body>
-  <div id="container"></div>
+  <div id="container"></div> <!-- This is the container for the buttons and text -->
 
   
 
-  <script defer>
-    const container = document.querySelector("#container");
+  <script defer>  // This is the script tag that will hold the JavaScript code for the page, the defer attribute is used to make sure the script is executed after the HTML is parsed
+    const container = document.querySelector("#container"); // This is the container for the buttons and text, i declar it here to that i can easily append the buttons to the DOM later
 
-    const button1 = document.createElement("button");
-    button1.textContent = "Test 1 for Hello World!";
-    container.appendChild(button1);
+    const button1 = document.createElement("button"); // This is the first button that will display an alert box when clicked
+    button1.textContent = "Test 1 for Hello World!"; // This is the text that will be displayed on the button
+    container.appendChild(button1); // this is appeneding the button to the container, so that it shows up on the page
 
-    const theText = document.createElement("h1");
-    container.appendChild(theText);
+    const theText = document.createElement("h1"); // This is the text that will be displayed when the second button is clicked
+    container.appendChild(theText); // This is appeneding the text to the container, so that it shows up on the page
 
 
-    button1.addEventListener("click", ()  => {
-      alert("Hello World!");
+    button1.addEventListener("click", ()  => { // This is the event listener for the first button, to give it functionality for when it is clicked
+      alert("Hello World!"); // This is the alert box that will pop up when the first button is clicked
 
     });
 
-    const button2 = document.createElement("button");
-    button2.textContent = "Test 2 for Hello world";
-    container.appendChild(button2);
+    const button2 = document.createElement("button"); // This is the second button that will display the text "Hello World!" when clicked
+    button2.textContent = "Test 2 for Hello world"; // This is the text that will be displayed on the button
+    container.appendChild(button2); // this is appeneding the button to the container, so that it shows up on the page
 
-    button2.addEventListener("click", () => {
-      theText.textContent = "Hello World!";
+    button2.addEventListener("click", () => { // This is the event listener for the second button, to give it functionality for when it is clicked
+      theText.textContent = "Hello World!"; // This is the text that will be displayed when the second button is clicked, it changes the text of the h1 I created and appended earlier
       
     })
   </script>
